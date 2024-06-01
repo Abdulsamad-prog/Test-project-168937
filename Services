@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="text-align: center;">
+        <h1>Our Cleaning Services</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2 style="text-align: center;">Services We Offer</h2>
+        <ul>
+            <li>Residential Cleaning</li>
+            <li>Commercial Cleaning</li>
+            <li>Carpet Cleaning</li>
+            <li>Window Cleaning</li>
+        </ul>
+        <p>Our team of professionals is dedicated to delivering quality services to meet your cleaning needs. We use eco-friendly products to ensure a safe and healthy environment.</p>
+        <p>Choose Sparkle Cleaners for a pristine space!</p>
+    </section>
+    <table border="1px">
+        <tr>
+            <th>Service</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Residential Cleaning</td>
+            <td>$99</td>
+        </tr>
+        <tr>
+            <td>Commercial Cleaning</td>
+            <td>$199</td>
+        </tr>
+        <tr>
+            <td>Carpet Cleaning</td>
+            <td>$75</td>
+        </tr>
+        <tr>
+            <td>Full House</td>
+            <td>$200</td>
+        </tr>
+        <tr>
+            <td>Car Cleaning</td>
+            <td>$50</td>
+        </tr>
+        <tr>
+            <td>Deep House Cleaning</td>
+            <td>$300</td>
+        </tr>
+    </table>
+    <form id="serviceForm" onsubmit="return validateSignupForm()">
+        <h2 style="text-align: center;">Service Registration</h2>
+        <br>
+        <label for="password">Enter password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirm-password">Confirm password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br>
+        <label for="service">Select a Service:</label>
+        <select id="service" name="service">
+            <option value="residential">Residential Cleaning</option>
+            <option value="commercial">Commercial Cleaning</option>
+            <option value="carpet">Carpet Cleaning</option>
+            <option value="full-house">Full House</option>
+            <option value="car">Car Cleaning</option>
+            <option value="deep-house">Deep House Cleaning</option>
+        </select><br>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="date">Date of Service:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+        <button type="submit">Register</button>
+    </form>
+    <p>For a detailed list of our services and pricing, visit our <a href="about.html">About Us</a> page.</p>
+    <ul>
+        <li><b>Residential Cleaning:</b> Our experts ensure your home is spotless and welcoming.</li>
+        <li><i>Commercial Cleaning:</i> Tailored solutions for a clean and professional workspace.</li>
+        <li>Carpet Cleaning: Revitalize your carpets for a fresh and clean look.</li>
+        <li>Window Cleaning: Crystal-clear windows to enhance your view.</li>
+    </ul>
+    <p>Contact us through our <a href="contact_us.html">Contact Us</a> page to book your cleaning service today!</p>
+    <script>
+        // Placeholder function to check login status
+        function isLoggedIn() {
+            // This should be replaced with actual login check
+            // For example, check a session variable or cookie
+            return false; // Change to true if the user is logged in
+        }
+
+        function validateSignupForm() {
+            if (!isLoggedIn()) {
+                alert("Please log in to register for a service.");
+                window.location.href = "login.html"; // Redirect to login page
+                return false;
+            }
+
+            // Get form inputs
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+
+            // Validate username
+            var usernameRegex = /^[a-zA-Z]+$/;
+            if (!usernameRegex.test(username)) {
+                alert("Username should only contain letters.");
+                return false;
+            }
+
+            // Validate password
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password should be 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character (@, $, !, %, *, ?, &).");
+                return false;
+            }
+
+            // Validate email
+            var emailRegex = /^[a-zA-Z\d._%+-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Display welcome message
+            alert("Welcome, " + username + "!");
+
+            // Optionally, you can submit the form here
+            // document.getElementById("serviceForm").submit();
+            return true;
+        }
+    </script>
+</body>
+</html>
