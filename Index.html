@@ -6,17 +6,64 @@
     <title>Sparkle Cleaners</title>
     <link rel="stylesheet" href="Style.CSS">
     <style>
-        body
-         { 
-            background-image:url("https://th.bing.com/th/id/OIP.5VK49mEbeokKnTqN02_ixgHaEK?rs=1&pid=ImgDetMain");
+        body { 
+            background-image: url("https://th.bing.com/th/id/OIP.5VK49mEbeokKnTqN02_ixgHaEK?rs=1&pid=ImgDetMain");
             background-size: cover;
             background-position: center;
-            height: 70vh; 
+            height: 100vh; 
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        h1 
-        {
-            color: purple ;
+        header, nav, section, footer {
             text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        h1 {
+            color: black;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: start;
+            text-align: left;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+        .caption {
+            margin-top: 10px;
+            max-width: 100%;
+            font-family: Arial, sans-serif;    
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .description {
+            grid-row: span 2;
+            font-family: Arial, sans-serif;    
+            font-size: 16px;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -28,24 +75,22 @@
         <ul>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Our Services</a></li>
-            <li><a href="Contact us.html">Contact us</a></li>
-            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
         </ul>
     </nav>
     <section>
-        <h2 style="text-align: center;">Sparkle Cleaning</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMVLBxwJotiB43xbeyEoidj0mvMi3pCrmNw&usqp=CAU"width="40%">
-                <p class="caption">Carpet <br> Cleaning</br></p>
-        <div class="image-list">
-            <div class="gallery">  
-                <img src="https://www.shutterstock.com/image-photo/brushes-bottles-cleaning-liquids-sponges-260nw-2246148707.jpg" width="30%" alt="Photo 2">
-                <p class="caption">Good Cleaning <br>Utensils</br></p>
-            </div>
+        <h2>Sparkle Cleaning</h2>
+        <div class="content-container">
             <div class="gallery">
-                <img src="https://thumbs.dreamstime.com/b/ready-to-spray-happy-man-hold-bottles-yellow-background-cleaning-trigger-sprayer-dispensers-wash-washing-house-cleaner-housing-184136903.jpg" width="40" alt="Photo 3">
-                <li>Hire End trained<br>workers</br></li>
+                <img src="https://thumbs.dreamstime.com/b/ready-to-spray-happy-man-hold-bottles-yellow-background-cleaning-trigger-sprayer-dispensers-wash-washing-house-cleaner-housing-184136903.jpg" alt="Hire End trained workers">
+                <p class="caption">Hire End trained workers</p>
             </div>
-         </div> <br>
+            <div class="description">
+                <p>Sparkle Cleaning is a premier cleaning company renowned for its commitment to excellence and customer satisfaction. Established with the goal of transforming residential and commercial spaces into spotless havens, Sparkle Cleaning offers a comprehensive range of services including deep cleaning, regular maintenance, carpet and upholstery cleaning, and specialized services such as post-construction and move-in/move-out cleanings. Utilizing eco-friendly products and state-of-the-art equipment, the company ensures a thorough and environmentally conscious clean. Their team of highly trained professionals is dedicated to delivering impeccable results, paying meticulous attention to detail to ensure every nook and cranny is pristine. Sparkle Cleaning prides itself on its transparent pricing, punctuality, and personalized service, tailoring each cleaning plan to meet the unique needs of its clients. With a strong reputation built on reliability, trustworthiness, and exceptional quality, Sparkle Cleaning continues to be the go-to choice for individuals and businesses seeking a cleaner, healthier, and more inviting environment.</p>
+            </div>
+        </div>
+        <a href="login.html" class="login-link">Go to Login</a>
         <p>Visit our <a href="services.html">Services</a> page to learn more.</p>
         <p><b>We prioritize cleanliness and customer satisfaction!</b></p>
         <p>For inquiries, contact us through our <a href="contact.html">Contact Us</a> page.</p>
@@ -55,3 +100,4 @@
     </footer>
 </body>
 </html>
+
