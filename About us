@@ -6,50 +6,125 @@
     <title>About Sparkle Cleaners</title>
     <link rel="stylesheet" href="Style.CSS">
     <style>
-        body
-         { 
-            background-image:url("https://th.bing.com/th/id/OIP.5VK49mEbeokKnTqN02_ixgHaEK?rs=1&pid=ImgDetMain");
+        body { 
+            background-image: url("https://th.bing.com/th/id/OIP.5VK49mEbeokKnTqN02_ixgHaEK?rs=1&pid=ImgDetMain");
             background-size: cover;
             background-position: center;
-            height: 70vh; 
+            height: 100vh; 
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        h1
-        {
-            color: purple ;
+        header, nav, section, footer {
             text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        h1 {
+            color: black;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        p {
+            text-align: left;
+            margin: 10px 0;
+        }
+        ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .image-container img {
+            max-width: 45%;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-
-    <header style="text-align: center;">
+    <header>
         <h1>About Sparkle Cleaners</h1>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Our Services</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="Contact us.html">Contact us</a></li>
-            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
         </ul>
     </nav>
-   
     <section id="s1">
-        <h2 style="text-align: center;">Our Mission</h2>
-        <p>At Sparkle Cleaners, we are committed to providing unparalleled cleaning services to create a clean and healthy environment for our clients. Our dedicated team ensures attention to detail and customer satisfaction.Sparkle Cleaning Company was born out of a visionary idea and a passion for creating pristine spaces. The brainchild of its founder, Emily Thompson, Sparkle originated from her desire to provide high-quality cleaning services that not only met but exceeded the expectations of clients. Emily, with a background in hospitality and a keen eye for detail, recognized the need for a cleaning company that prioritized professionalism, reliability, and a commitment to spotless environments. Fueled by her entrepreneurial spirit, Emily gathered a team of dedicated professionals who shared her vision of transforming spaces into gleaming showcases. Today, Sparkle Cleaning Company stands as a testament to Emily's vision, consistently delivering exceptional cleaning services that bring a touch of brilliance to homes and businesses alike.</p>
-        <p><i>Contact us today for a sparkling experience!</i></p>
+        <h2>Our Services</h2>
+        <p>
+            <strong>Sparkle Cleaners</strong> is a premier cleaning company offering specialized services in residential cleaning, commercial cleaning, carpet cleaning, and window cleaning. Established to ensure impeccable cleanliness and customer satisfaction, Sparkle Cleaners provides:
+        </p>
+
+        <ol>
+            <li>
+                <b>Residential Cleaning</b>: Thorough housekeeping services to keep your home spotless and welcoming.
+            </li>
+            <li>
+                <b>Commercial Cleaning</b>: Customized cleaning solutions for offices, retail spaces, and other business environments.
+            </li>
+            <li>
+                <b>Carpet Cleaning</b>: Advanced techniques and eco-friendly products to remove dirt and stains, rejuvenating your carpets.
+            </li>
+            <li>
+                <b>Window Cleaning</b>: Streak-free window cleaning for a crystal-clear view and enhanced property appearance.
+            </li>
+        </ol>
+
+        <p>
+            The company employs highly trained professionals who use eco-friendly, state-of-the-art products and techniques. Known for reliability, efficiency, and exceptional customer service, Sparkle Cleaners offers flexible scheduling to suit your needs. Trust Sparkle Cleaners to create a pristine and healthy environment for you.
+        </p>
+
+        <p>
+            <i>Contact us today for a sparkling experience!</i>
+        </p>
     </section>
-
-    <ul>
-        <li>Residential Cleaning</li>
-        <li>Commercial Cleaning</li>
-        <li>Carpet Cleaning</li>
-        <li>Window Cleaning</li>
-    </ul>
-
-<img src="https://www.shutterstock.com/image-photo/brushes-bottles-cleaning-liquids-sponges-260nw-2246148707.jpg" width="30%">
-    <p>For more information, visit our <a href="index.html">Home</a> page.</p>
-
+    <section class="image-container">
+        <img src="https://www.shutterstock.com/image-photo/brushes-bottles-cleaning-liquids-sponges-260nw-2246148707.jpg" alt="Cleaning Supplies">
+        <img src="https://www.healthyhomesutah.com/wp-content/uploads/Professional-House-Cleaning-Services-in-North-Ogden-Utah.jpg" alt="Professional House Cleaning Services">
+    </section>
+    <section>
+        <p>For more information, visit our <a href="index.html">Home</a> page.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Sparkle Cleaners. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
