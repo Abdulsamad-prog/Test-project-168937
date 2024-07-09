@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Cleaning Services</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            background-image: url("https://th.bing.com/th/id/OIP.5VK49mEbeokKnTqN02_ixgHaEK?rs=1&pid=ImgDetMain");
+            background-size: cover;
+            background-position: center;
+            height: 100vh; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, nav, section, footer {
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        h1 {
+            color: black;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .form-container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .form-container form {
+            max-width: 500px;
+            text-align: left;
+        }
+        img {
+            width: 45%; /* Set the image to appear small */
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <header style="text-align: center;">
+    <header>
         <h1>Our Cleaning Services</h1>
     </header>
     <nav>
@@ -19,7 +56,7 @@
         </ul>
     </nav>
     <section>
-        <h2 style="text-align: center;">Services We Offer</h2>
+        <h2>Services We Offer</h2>
         <ul>
             <li>Residential Cleaning</li>
             <li>Commercial Cleaning</li>
@@ -29,7 +66,7 @@
         <p>Our team of professionals is dedicated to delivering quality services to meet your cleaning needs. We use eco-friendly products to ensure a safe and healthy environment.</p>
         <p>Choose Sparkle Cleaners for a pristine space!</p>
     </section>
-    <table border="1px">
+    <table border="1px" style="margin: 0 auto;">
         <tr>
             <th>Service</th>
             <th>Price</th>
@@ -59,34 +96,32 @@
             <td>$300</td>
         </tr>
     </table>
-    <form id="serviceForm" onsubmit="return validateSignupForm()">
-        <h2 style="text-align: center;">Service Registration</h2>
-        <br>
-        <label for="password">Enter password:</label>
-        <input type="password" id="password" name="password" required><br>
-        <label for="confirm-password">Confirm password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required><br>
-        <label for="service">Select a Service:</label>
-        <select id="service" name="service">
-            <option value="residential">Residential Cleaning</option>
-            <option value="commercial">Commercial Cleaning</option>
-            <option value="carpet">Carpet Cleaning</option>
-            <option value="full-house">Full House</option>
-            <option value="car">Car Cleaning</option>
-            <option value="deep-house">Deep House Cleaning</option>
-        </select><br>
-        <label for="username">Name:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="date">Date of Service:</label>
-        <input type="date" id="date" name="date" required><br>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br>
-        <label for="comments">Comments:</label><br>
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
-        <button type="submit">Register</button>
-    </form>
+    <div class="form-container">
+        <img src="https://img.freepik.com/free-photo/cheerful-asian-woman-holds-cleaning-equipment-being-good-mood-after-tidying-up-room-wears-hat-round-spectacles-poses-near-laundry-basket-smeared-with-dirt-isolated-yellow-wall_273609-50515.jpg" alt="Cheerful woman holding cleaning equipment">
+        <form id="serviceForm" onsubmit="return validateSignupForm()">
+            <h2>Service Registration</h2>
+            <label for="service">Select a Service:</label>
+            <select id="service" name="service">
+                <option value="residential">Residential Cleaning</option>
+                <option value="commercial">Commercial Cleaning</option>
+                <option value="carpet">Carpet Cleaning</option>
+                <option value="full-house">Full House</option>
+                <option value="car">Car Cleaning</option>
+                <option value="deep-house">Deep House Cleaning</option>
+            </select><br>
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="date">Date of Service:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
     <p>For a detailed list of our services and pricing, visit our <a href="about.html">About Us</a> page.</p>
     <ul>
         <li><b>Residential Cleaning:</b> Our experts ensure your home is spotless and welcoming.</li>
